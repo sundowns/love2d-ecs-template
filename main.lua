@@ -8,7 +8,6 @@ function love.load()
   Timer = require("libs.timer")
   _constants = require("src.constants")
   _util = require("libs.util")
-  resources = require("libs.cargo").init("resources")
   Concord = require("libs.concord")
 
   _components = Concord.components
@@ -16,10 +15,10 @@ function love.load()
   _worlds = Concord.worlds
   _assemblages = Concord.assemblages
 
-  Concord.loadComponents({"src.components.transform", "src.components.controlled"})
-  Concord.loadSystems({"src.systems.motion", "src.systems.input"})
-  Concord.loadWorlds({"src.worlds.game"})
-  -- Concord.loadAssemblages({})
+  Concord.loadComponents("src/components")
+  Concord.loadSystems("src/systems")
+  Concord.loadWorlds("src/worlds")
+  -- Concord.loadAssemblages("src/assemblages")
 end
 
 function love.update(dt)
