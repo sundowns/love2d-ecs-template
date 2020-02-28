@@ -18,7 +18,7 @@ function love.load()
   Concord.loadComponents("src/components")
   Concord.loadSystems("src/systems")
   Concord.loadWorlds("src/worlds")
-  -- Concord.loadAssemblages("src/assemblages")
+  Concord.loadAssemblages("src/assemblages")
 
   _assemblages.player:assemble(
     Concord.entity(_worlds.game),
