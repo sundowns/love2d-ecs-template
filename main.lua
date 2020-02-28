@@ -40,6 +40,10 @@ function love.draw()
   )
 
   _worlds.game:emit("draw")
+
+  if _DEBUG then
+    _util.l.render_stats()
+  end
 end
 
 function love.keypressed(key, _, _)
