@@ -19,6 +19,11 @@ function love.load()
   Concord.loadSystems("src/systems")
   Concord.loadWorlds("src/worlds")
   -- Concord.loadAssemblages("src/assemblages")
+
+  _assemblages.player:assemble(
+    Concord.entity(_worlds.game),
+    Vector(love.graphics.getWidth() / 2, love.graphics.getHeight() / 2)
+  )
 end
 
 function love.update(dt)
